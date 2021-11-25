@@ -22,8 +22,8 @@ public enum MailCode {
         // Inject client data
         // Return text
         Path currentPath = Paths.get(System.getProperty("user.dir"));
-        String templatesDir = "mail_templates";
-        Path path = Paths.get(currentPath.toString(), templatesDir,filename);
+        String templatesDir = "src/main/java/mailer/mail_templates";
+        Path path = Paths.get(currentPath.toString(),templatesDir,filename);
         List<String> lines = Files.readAllLines(path);
         String fileContents = String.join("\n",lines);
         return fileContents;
